@@ -131,12 +131,12 @@ reqwest = { version = "0.12", features = ["stream", "blocking"] }
 test-environment = { git = "https://github.com/fermyon/conformance-tests", rev = "387b7f375df59e6254a7c29cf4a53507a9f46d32" }
 tracing = { version = "0.1", features = ["log"] }
 
-wasi-common-preview1 = { version = "22.0.0", package = "wasi-common", features = [
+wasi-common-preview1 = { git = "https://github.com/bacongobbler/wasmtime", branch = "http2", package = "wasi-common", features = [
   "tokio",
 ] }
-wasmtime = "22.0.0"
-wasmtime-wasi = "22.0.0"
-wasmtime-wasi-http = "22.0.0"
+wasmtime = { git = "https://github.com/bacongobbler/wasmtime", branch = "http2" }
+wasmtime-wasi = { git = "https://github.com/bacongobbler/wasmtime", branch = "http2" }
+wasmtime-wasi-http = { git = "https://github.com/bacongobbler/wasmtime", branch = "http2" }
 
 spin-componentize = { path = "crates/componentize" }
 
